@@ -1,5 +1,8 @@
 const express = require('express')
 const dotenv= require ('dotenv')
+const bootcamps = require('./routes/bootcamps')
+
+const morgan = require('morgan')
 
 dotenv.config({path:'./config/config.env'})
 
@@ -7,9 +10,16 @@ dotenv.config({path:'./config/config.env'})
 const app = express()
 
 
-app.get('/',(req,res)=>{
-     res.json({greet :"Hellos"})
-})
+app.use(morgan('dev'))
+
+
+
+app.use('/api/v1/bootcamps',bootcamps)
+
+
+
+
+ 
 
 
 
