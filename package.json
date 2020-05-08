@@ -7,7 +7,8 @@
     "start": "NODE_ENV=production node server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "gita": "git add .",
-    "gitc": "git commit -m 'commit to the changes' "
+    "gitc": "git commit -m 'commit to the changes' ",
+    "gitp": "git push origin master"
   },
   "keywords": [],
   "author": "",
