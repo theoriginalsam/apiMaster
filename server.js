@@ -1,7 +1,7 @@
 const express = require('express')
 const dotenv= require ('dotenv')
 const bootcamps = require('./routes/bootcamps')
-const db = require('./config/db')
+const conn = require('./config/db')
 const morgan = require('morgan')
 
 dotenv.config({path:'./config/config.env'})
@@ -11,7 +11,7 @@ const app = express()
 
 
 app.use(morgan('dev'))
-db()
+conn()
 
 
 
