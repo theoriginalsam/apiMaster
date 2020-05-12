@@ -1,9 +1,21 @@
+const Bootcamp = require('../models/Bootcamp')
 
 
 
-
-exports.createBootcamp=(req,res,next)=>{
-    res.status(200).json({success:true , message:"Got the boot camp"})
+exports.createBootcamp=async (req,res,next)=>{
+    try{
+    const bootnew = await Bootcamp.create(req.body);
+    res.status(201).json({
+        success:true,
+        data:bootnew
+    })
+}
+catch{
+    res.status(400).json({
+        success:'false'
+    })
+}
+    
 }
 
 
