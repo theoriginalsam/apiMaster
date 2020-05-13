@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=production node server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gita": "git add .",
+    "gita": "git add -A && git commit -m 'just a commmit on the script' ",
     "gitc": "git commit -m 'commit to the changes' ",
     "gitp": "git push origin master"
   },
