@@ -19,13 +19,57 @@ catch{
 }
 
 
-exports.findBootcamps=(req,res,next)=>{
-    res.status(200).json({success:true , message:"Found"})
+exports.findBootcamps=async(req,res,next)=>{
+
+    try{
+         const bootfind = await Bootcamp.find();
+         res.status(200).json({
+             success:true,
+             message:"FOund",
+             data:bootfind
+         })
+
+    }catch(err){
+
+        res.status(400).json({
+            success:"false",
+            message:'Not found  '
+        })
+
+    }
+
+     
+
 }
 
 
-exports.findBootcamp=(req,res,next)=>{
-    res.status(200).json({success:true , message:"Found a bc"})
+exports.findBootcamp=async(req,res,next)=>{
+
+    try{
+        const bootfind = await Bootcamp.findById(req.params.id );
+        if(!bootfind){
+            res.status(400).json({
+                success:'false',
+                message:"incorrect id"
+            }) 
+        res.status(200).json({
+            success:true,
+            message:"FOund",
+            data:bootfind
+        })
+
+  
+        }
+
+   }catch(err){
+
+       res.status(400).json({
+           success:"false",
+           message:'Not found  '
+       })
+
+   }
+
 }
 
 
