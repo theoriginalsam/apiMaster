@@ -54,7 +54,7 @@ exports.findBootcamp=async(req,res,next)=>{
             }) 
         res.status(200).json({
             success:true,
-            message:"FOund",
+            message:"Found",
             data:bootfind
         })
 
