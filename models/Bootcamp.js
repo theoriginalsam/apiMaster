@@ -117,6 +117,7 @@ BootcampSchema.pre('save', function(next) {
 });
 
 // Geocode & create location field
+//need to add self API ref key to work
 BootcampSchema.pre('save', async function(next) {
   const loc = await geocoder.geocode(this.address);
   this.location = {
