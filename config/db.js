@@ -8,7 +8,7 @@ const connection=()=>{
 const con = mongoose.connect('mongodb://localhost:27017/devcampers', {useUnifiedTopology: true,useNewUrlParser: true}).then(()=>
     console.log(`Connected`.green.bold.underline)
 
-).catch(err=>console.log("EROR"))
+).catch(err=>console.log("ERROR"))
 
 }
 
