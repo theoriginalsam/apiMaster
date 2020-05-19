@@ -32,7 +32,7 @@ app.use('/api/v1/bootcamps',bootcamps)
 
 
 
-const PORT = process.env.PORT || 7000
+const PORT = process.env.PORT || 9000
 const env = process.env.NODE_ENV
 
 app.listen(PORT,console.log(`Server running at ${PORT} the API is in ${env} mode`)) 
