@@ -4,7 +4,7 @@ const {createBootcamp,findBootcamps,findBootcamp,updateBootcamp,deleteBootcamp}=
 
 
 app.route('/').get(findBootcamps).post(createBootcamp)
-app.route('/:id').get(findBootcamp).put(updateBootcamp).delete(deleteBootcamp)
+app.route('/:id').get(findBootcamp).put(updateBootcamp).delete(deleteBootcamp). //id to delete 
 
 
 
